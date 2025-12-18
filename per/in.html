@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ketim Perfumes — Handmade Ethiopian Fragrances</title>
+  <meta name="description" content="Ketim Perfumes — Handmade, locally-inspired fragrances. Shop 30ml & 50ml bottles. Order via WhatsApp or visit our store." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --cream: #F7F3EE;          /* background */
+      --soft-gold: #C9A76A;      /* primary accent */
+      --deep-teal: #234E52;      /* headings */
+      --navy: #1F3A52;          /* dark accent */
+      --blush: #E8CFC7;         /* secondary accent */
+      --muted: #7A7A7A;         /* gray text */
+      --glass: rgba(255,255,255,0.72);
+      --radius: 14px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--cream),#fff);
+      color:var(--deep-teal);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo svg{width:48px;height:48px}
+    .brand{font-family:'Playfair Display', serif;font-size:20px;color:var(--navy);}
+    nav a{margin-left:18px;color:var(--deep-teal);text-decoration:none;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:30px 0}
+    .hero-card{background:linear-gradient(180deg,var(--glass),rgba(255,255,255,0.9));border-radius:var(--radius);padding:28px;box-shadow:0 6px 30px rgba(31,58,82,0.07)}
+    .eyebrow{color:var(--muted);font-size:13px;font-weight:600}
+    h1{font-family:'Playfair Display',serif;font-size:38px;margin:8px 0;color:var(--navy)}
+    p.lead{color:var(--muted);margin-bottom:18px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:12px 18px;border-radius:12px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:var(--soft-gold);color:#10201F}
+    .btn-outline{background:transparent;border:2px solid var(--deep-teal);color:var(--deep-teal)}
+
+    /* Product card */
+    .product{background:transparent;padding:18px;border-radius:12px;display:flex;gap:12px;align-items:center}
+    .bottle{width:140px;height:180px;background:linear-gradient(180deg, #fff, #f5f0ea);border-radius:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+    .bottle svg{width:86px;height:120px}
+    .prod-info h3{margin:6px 0 4px;font-size:18px;color:var(--navy)}
+    .price{font-weight:700;color:var(--deep-teal)}
+
+    /* Grid of products */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 8px 28px rgba(31,58,82,0.04)}
+
+    /* About and contact */
+    .about{display:flex;gap:18px;padding:28px 0}
+    .about .text{flex:1}
+
+    footer{padding:28px 0;border-top:1px solid rgba(31,58,82,0.04);color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .hero-card{order:2}
+      nav{display:none}
+      .logo{gap:8px}
+    }
+
+    /* small utilities */
+    .tag{background:var(--blush);padding:6px 12px;border-radius:999px;font-weight:600;color:var(--navy);display:inline-block}
+    .small{font-size:13px;color:var(--muted)}
+
+    /* cart */
+    .cart-btn{position:fixed;right:18px;bottom:18px;border-radius:999px;padding:12px 16px;background:var(--navy);color:#fff;box-shadow:0 12px 30px rgba(31,58,82,0.18);z-index:40}
+    .cart-panel{position:fixed;right:18px;bottom:80px;width:320px;background:#fff;border-radius:12px;padding:12px;box-shadow:0 18px 40px rgba(31,58,82,0.12)}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#C9A76A" offset="0"/><stop stop-color="#E8CFC7" offset="1"/></linearGradient></defs><circle cx="50" cy="50" r="44" fill="url(#g)"/><text x="50" y="58" text-anchor="middle" font-family="Playfair Display, serif" font-size="34" fill="#10201F">K</text></svg>
+        <div>
+          <div class="brand">Ketim Perfumes</div>
+          <div class="small">Handmade • Local • Elegant</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">New In</div>
+        <h1>Fragrances inspired by Ethiopian moments</h1>
+        <p class="lead">Small-batch perfumes handcrafted with love. Long-lasting, locally-inspired notes — perfect for daily wear or special moments.</p>
+        <div class="cta-row">
+          <button class="btn btn-primary" onclick="scrollToId('products')">Shop perfumes</button>
+          <button class="btn btn-outline" onclick="orderWhatsApp('I would like to place an order')">Order via WhatsApp</button>
+        </div>
+
+        <div style="margin-top:18px;" class="small">Open hours: Mon–Sat, 10:00–18:00 • Pickup in Addis Ababa</div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <div class="tag">Signature</div>
+          <div style="height:10px"></div>
+          <div class="product">
+            <div class="bottle" aria-hidden="true">
+              <svg viewBox="0 0 80 120"><rect x="12" y="22" width="56" height="80" rx="10" fill="#fff" stroke="#ece4da" stroke-width="1"/><rect x="28" y="6" width="24" height="20" rx="5" fill="#c9a76a" opacity="0.65"/></svg>
+            </div>
+            <div class="prod-info">
+              <h3>Sheger Bloom — 50ml</h3>
+              <div class="small">Notes: Jasmine • Amber • Cedar</div>
+              <div style="height:8px"></div>
+              <div class="price">ETB 950</div>
+              <div style="height:12px"></div>
+              <div style="display:flex;gap:8px">
+                <button class="btn btn-primary" onclick="addToCart('Sheger Bloom',950)">Add to cart</button>
+                <button class="btn btn-outline" onclick="orderWhatsApp('I want Sheger Bloom 50ml')">Buy now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="height:12px"></div>
+        <div class="card small">Fast delivery inside Addis • Custom gift packs available</div>
+      </aside>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+        <h2 style="font-family:'Playfair Display',serif">Our Collection</h2>
+        <div class="small">Choose a scent • 30ml & 50ml</div>
+      </div>
+
+      <div class="grid" style="margin-top:12px">
+        <!-- Product 1 -->
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="bottle" aria-hidden>
+              <svg viewBox="0 0 80 120"><rect x="12" y="22" width="56" height="80" rx="10" fill="#fff" stroke="#ece4da" stroke-width="1"/><rect x="28" y="6" width="24" height="20" rx="5" fill="#C9A76A" opacity="0.7"/></svg>
+            </div>
+            <div style="flex:1">
+              <h3 style="margin:0;color:var(--navy)">Sheger Bloom</h3>
+              <div class="small">Jasmine • Amber • Cedar</div>
+              <div style="height:8px"></div>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div class="price">ETB 950</div>
+                <div>
+                  <button class="btn btn-primary" onclick="addToCart('Sheger Bloom',950)">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="bottle" aria-hidden>
+              <svg viewBox="0 0 80 120"><rect x="12" y="22" width="56" height="80" rx="10" fill="#fff"/><rect x="28" y="6" width="24" height="20" rx="5" fill="#E8CFC7" opacity="0.9"/></svg>
+            </div>
+            <div style="flex:1">
+              <h3 style="margin:0;color:var(--navy)">Addis Amber</h3>
+              <div class="small">Saffron • Amber • Vanilla</div>
+              <div style="height:8px"></div>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div class="price">ETB 1100</div>
+                <div>
+                  <button class="btn btn-primary" onclick="addToCart('Addis Amber',1100)">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="bottle" aria-hidden>
+              <svg viewBox="0 0 80 120"><rect x="12" y="22" width="56" height="80" rx="10" fill="#fff"/><rect x="28" y="6" width="24" height="20" rx="5" fill="#234E52" opacity="0.9"/></svg>
+            </div>
+            <div style="flex:1">
+              <h3 style="margin:0;color:var(--navy)">Oromo Spice</h3>
+              <div class="small">Cardamom • Bergamot • Sandalwood</div>
+              <div style="height:8px"></div>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div class="price">ETB 900</div>
+                <div>
+                  <button class="btn btn-primary" onclick="addToCart('Oromo Spice',900)">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="card">
+          <div style="display:flex;gap:12px;align-items:center">
+            <div class="bottle" aria-hidden>
+              <svg viewBox="0 0 80 120"><rect x="12" y="22" width="56" height="80" rx="10" fill="#fff"/><rect x="28" y="6" width="24" height="20" rx="5" fill="#F5D6C9" opacity="0.9"/></svg>
+            </div>
+            <div style="flex:1">
+              <h3 style="margin:0;color:var(--navy)">Teff Blossom</h3>
+              <div class="small">Rose • Citrus • Musk</div>
+              <div style="height:8px"></div>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div class="price">ETB 850</div>
+                <div>
+                  <button class="btn btn-primary" onclick="addToCart('Teff Blossom',850)">Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="text">
+        <h2 style="font-family:'Playfair Display',serif">About Ketim</h2>
+        <p class="small">Ketim Perfumes is a small-batch perfume house based in Addis Ababa. We craft scents inspired by Ethiopian flowers, spices, and the ambience of our cities. We focus on longevity and natural-feeling blends that suit everyday wear and special moments.</p>
+        <ul class="small">
+          <li>Hand-blended in small batches</li>
+          <li>Locally inspired ingredients and notes</li>
+          <li>Face-to-face pickup or delivery inside Addis</li>
+        </ul>
+      </div>
+      <div style="min-width:260px;">
+        <div class="card">
+          <h3 style="margin:0">Why choose us?</h3>
+          <p class="small">We use quality bases and carefully selected fragrance oils for long-lasting impressions. Each bottle is prepared by hand and labeled with care.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 style="font-family:'Playfair Display',serif">Contact & Orders</h2>
+      <div style="display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:12px">
+        <div class="card">
+          <form id="orderForm" onsubmit="handleForm(event)">
+            <label class="small">Your name</label>
+            <input id="name" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:6px;margin-bottom:12px" />
+            <label class="small">WhatsApp number</label>
+            <input id="phone" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:6px;margin-bottom:12px" placeholder="+2519xxxxxxxx" />
+            <label class="small">Order details (product & qty)</label>
+            <textarea id="details" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:6px;margin-bottom:12px" placeholder="E.g., Sheger Bloom 50ml x1"></textarea>
+            <div style="display:flex;gap:8px">
+              <button type="submit" class="btn btn-primary">Send via WhatsApp</button>
+              <button type="button" class="btn btn-outline" onclick="clearForm()">Clear</button>
+            </div>
+            <p class="small" style="margin-top:8px">We'll reply on WhatsApp to confirm delivery and payment options.</p>
+          </form>
+        </div>
+
+        <div class="card small">
+          <strong>Store:</strong>
+          <div>Sample shop (pickup) • Addis Ababa</div>
+          <div style="height:8px"></div>
+          <strong>Phone / WhatsApp:</strong>
+          <div id="wa-number">+2519XXXXXXXX</div>
+          <div style="height:8px"></div>
+          <strong>Follow us:</strong>
+          <div style="display:flex;gap:8px;margin-top:6px"><a href="#">Instagram</a> <a href="#">Facebook</a></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Ketim Perfumes — Handmade in Ethiopia</div>
+      <div class="small">Built with care • Orders via WhatsApp</div>
+    </footer>
+  </div>
+
+  <!-- Floating cart/quick order -->
+  <button class="cart-btn" onclick="toggleCart()">Cart (<span id="cartCount">0</span>)</button>
+  <div id="cartPanel" class="cart-panel" style="display:none">
+    <h4 style="margin:6px 0">Your cart</h4>
+    <div id="cartItems" style="max-height:220px;overflow:auto"></div>
+    <div style="height:10px"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="small">Total:</div>
+      <div id="cartTotal" style="font-weight:800">ETB 0</div>
+    </div>
+    <div style="height:10px"></div>
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-primary" onclick="checkoutCart()">Checkout via WhatsApp</button>
+      <button class="btn btn-outline" onclick="clearCart()">Clear</button>
+    </div>
+  </div>
+
+  <script>
+    // small utilities
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const WA_NUMBER = '+2519XXXXXXXX'; // <-- Change to your WhatsApp number
+    document.getElementById('wa-number').textContent = WA_NUMBER;
+
+    function scrollToId(id){
+      document.getElementById(id).scrollIntoView({behavior:'smooth'});
+    }
+
+    // Order via WhatsApp
+    function orderWhatsApp(msg){
+      const text = encodeURIComponent(msg + '\n\nFrom website');
+      const link = `https://wa.me/${WA_NUMBER.replace(/\D/g,'')}?text=${text}`;
+      window.open(link,'_blank');
+    }
+
+    // Simple cart (frontend only)
+    let cart = [];
+    function addToCart(name,price){
+      const item = cart.find(i=>i.name===name);
+      if(item) item.qty++;
+      else cart.push({name,price,qty:1});
+      renderCart();
+    }
+    function renderCart(){
+      const container = document.getElementById('cartItems');
+      container.innerHTML = '';
+      let total=0; let count=0;
+      cart.forEach((it,idx)=>{
+        const div = document.createElement('div');
+        div.style.display='flex';div.style.justifyContent='space-between';div.style.alignItems='center';div.style.padding='8px 0';
+        div.innerHTML = `<div style=\"flex:1\">${it.name} <div class=\"small\">x${it.qty}</div></div><div style=\"min-width:80px;text-align:right\">ETB ${it.price*it.qty}</div>`;
+        container.appendChild(div);
+        total += it.price*it.qty; count+=it.qty;
+      })
+      document.getElementById('cartTotal').textContent = 'ETB ' + total;
+      document.getElementById('cartCount').textContent = count;
+    }
+    function toggleCart(){
+      const panel = document.getElementById('cartPanel');
+      panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+    }
+    function clearCart(){ cart=[]; renderCart(); }
+    function checkoutCart(){
+      if(cart.length===0){ alert('Cart is empty'); return; }
+      const lines = cart.map(it=>`${it.name} x${it.qty} — ETB ${it.price*it.qty}`);
+      const total = cart.reduce((s,it)=>s+it.price*it.qty,0);
+      const msg = `Order from Ketim Perfumes:\n${lines.join('\n')}\nTotal: ETB ${total}`;
+      const url = `https://wa.me/${WA_NUMBER.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`;
+      window.open(url,'_blank');
+    }
+
+    // Contact form that sends to WhatsApp (no backend)
+    function handleForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const details = document.getElementById('details').value.trim();
+      const msg = `Order from website:\nName: ${name}\nPhone: ${phone}\nDetails: ${details}`;
+      const url = `https://wa.me/${WA_NUMBER.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`;
+      window.open(url,'_blank');
+    }
+    function clearForm(){ document.getElementById('orderForm').reset(); }
+  </script>
+</body>
+</html>
