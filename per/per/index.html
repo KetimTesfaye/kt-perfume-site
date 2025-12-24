@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kቲ perfume — Create Your Own Essence</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar glass container">
+    <a href="#home" class="brand-name" style="font-size: 54px; font-weight: 800;">Kቲ Perfume</a>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav class="nav-links" id="nav-menu">
+      <a href="#products" class="nav-link">Scent Room</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <button id="themeBtn" class="theme-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero container" style="display:flex; align-items:center; gap:50px; padding-top: 60px; padding-bottom: 60px;">
+      <div class="hero-left">
+        <h1 style="font-family:'Playfair Display'; font-size: 52px; line-height: 0.8;">
+          <span class="typewriter">
+            <span style="color: var(--brand-gold);">Create Your</span> 
+            <span style="color: white;">Own Essence</span>
+          </span>
+        </h1>
+        <h2 style="font-size: 2.3rem; color: var(--brand-gold); margin-bottom: 20px; font-weight: 500;">
+          የራስዎን መዓዛ ይፍጠሩ
+        </h2>
+        <p style="color: var(--text-muted); font-size: 18px; margin: 20px 0;">
+          Experience high-end luxury for less. We specialize in premium hand-blended fragrances inspired by global icons, professional bottle refills, and bespoke scents mixed uniquely for you. Crafted in Addis Ababa, made for your skin.
+        </p>
+        <div style="display:flex; gap:15px; margin-top:30px;">
+          <a href="#products" class="btn btn-primary">View Collection</a>
+          <a href="#order" class="btn btn-outline">Order via WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="kt.png" alt="Kt perfume Logo">
+      </div>
+    </section>
+
+    <section id="about" class="container glass" style="margin-top: 40px; padding: 50px;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+        <div>
+          <h2 style="font-family:'Playfair Display'">About Our House</h2>
+          <p style="color: var(--text-muted);">Founded in 2025 in Addis Ababa, Kt perfume is where luxury becomes accessible. We specialize in high-quality, hand-blended fragrances that mirror the world’s most iconic designer brands. At our boutique, we prioritize the art of the scent over the cost of the name tag, ensuring you smell premium for less.</p>
+          <ul style="color: var(--brand-gold); line-height: 2.2; font-weight: 600;">
+            <li> Custom Scent Creation: Our specialty. We collaborate with you to mix and create a brand-new, unique fragrance designed entirely around your personal preferences.</li>
+            <li> Premium "Inspired-By" Scents: Affordable, high-quality recreations of global favorites like Sauvage, Baccarat, Blue de Chanel, Si, Eternity and much more.</li>
+            <li> Professional Refills: We refill your empty bottles with our premium blends to save you money and reduce waste.</li>
+          </ul>
+        </div>
+        <div class="glass" style="padding: 30px; border-color: var(--brand-gold);">
+          <h3 style="color: var(--brand-gold); margin-top:0;">The Handmade Difference</h3>
+          <p style="font-size: 14px;">We avoid mass production. Each bottle is hand-poured, labeled with care, and checked for quality before it reaches your hands.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="container" style="margin-top: 100px;">
+      <h2 style="text-align:center; font-family:'Playfair Display'; font-size: 38px;">Scent Gallery</h2>
+      <div class="grid">
+         <article class="perfume-card glass">
+          <div class="bottle-placeholder"><span>BOTTLE IMAGE</span></div>
+          <h3>Sauvage</h3>
+          <p style="color: var(--text-muted); font-size: 13px;">Fresh • Spicy • Raw</p>
+          <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Bergamot • Pepper • Ambroxan</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">950 ETB</p>
+          <button class="btn btn-primary" style="width:100%" onclick="selectPerfume('Sauvage')">Select Scent</button>
+        </article>
+        <article class="perfume-card glass">
+          <div class="bottle-placeholder"><span>BOTTLE IMAGE</span></div>
+          <h3>Blue D</h3>
+          <p style="color: var(--text-muted); font-size: 13px;">Sophisticated • Clean • Smoky</p>
+          <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Grapefruit • Incense • Cedarwood</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">950 ETB</p>
+          <button class="btn btn-primary" style="width:100%" onclick="selectPerfume('Blue D')">Select Scent</button>
+        </article>
+        <article class="perfume-card glass">
+          <div class="bottle-placeholder"><span>BOTTLE IMAGE</span></div>
+          <h3>Si</h3>
+        <p style="color: var(--text-muted); font-size: 13px;">Floral • Warm • Elegant</p>
+        <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Blackcurrant • Rose • Vanilla</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">1100 ETB</p>
+          <button class="btn btn-primary" style="width:100%" onclick="selectPerfume('Si')">Select Scent</button>
+        </article>
+        <article class="perfume-card glass">
+          <div class="bottle-placeholder"><span>BOTTLE IMAGE</span></div>
+          <h3>Baccarat</h3>
+        <p style="color: var(--text-muted); font-size: 13px;">Luxury • Sweet • Airy</p>
+        <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Saffron • Jasmine • Ambergris</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">900 ETB</p>
+          <button class="btn btn-primary" style="width:100%" onclick="selectPerfume('Agressive')">Select Scent</button>
+        </article>
+        <article class="perfume-card glass">
+          <div class="bottle-placeholder"><span>BOTTLE IMAGE</span></div>
+          <h3>Creed Aventus</h3>
+          <p style="color: var(--text-muted); font-size: 13px;">Power • Success • Fruity</p>
+          <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Pineapple • Birch • Oakmoss</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">950 ETB</p>
+          <button class="btn btn-primary" style="width:100%" onclick="selectPerfume('Sauvage')">Select Scent</button>
+        </article>
+        <article class="perfume-card glass">
+          <div class="bottle-placeholder"><span>BOTTLE IMAGE</span></div>
+          <h3>Eternity</h3>
+          <p style="color: var(--text-muted); font-size: 13px;">Timeless • Fresh • Green</p>
+          <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Lavender • Sage • Sandalwood</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">950 ETB</p>
+          <button class="btn btn-primary" style="width:100%" onclick="selectPerfume('Sauvage')">Select Scent</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="container" style="margin-top: 100px;">
+      <h2 style="text-align:center; margin-bottom: 40px;">Standard Pricing</h2>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+        <div class="glass" style="padding:30px; text-align:center;">
+          <h3>30ml Classic</h3>
+          <p class="price-large" style="font-size: 28px; color: var(--brand-gold);">550 ETB</p>
+        </div>
+        <div class="glass" style="padding:30px; text-align:center; border: 1px solid var(--brand-gold);">
+          <h3>50ml Signature</h3>
+          <p class="price-large" style="font-size: 28px; color: var(--brand-gold);">950 ETB</p>
+        </div>
+        <div class="glass" style="padding:30px; text-align:center;">
+          <h3>Gift Set</h3>
+          <p class="price-large" style="font-size: 28px; color: var(--brand-gold);">2400 ETB</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="container" style="margin-top: 80px;">
+      <h2 style="text-align:center; margin-bottom: 30px;">FAQ/በተደጋጋሚ የሚጠየቁ ጥያቄዎች</h2>
+      <div class="glass" style="padding: 20px;">
+        <details class="faq-item"><summary>What is your return policy? የሽያጭ ህጋችሁ ምንድነው? </summary><p>We accept exchanges within 5 days if the product is unopened.</p></details>
+        <details class="faq-item"><summary>Do you ship outside Addis? ከአዲስ አበባ ውጭ ትልካላችሁ?</summary><p>Yes. we ship across Ethiopia. Contact us on WhatsApp to arrange delivery.</p></details>
+      </div>
+    </section>
+
+    <section id="order" class="container" style="text-align: center; margin-top: 100px;">
+      <h2 style="font-family:'Playfair Display'">Secure Your Scent</h2>
+      <form id="whatsappForm" class="order-form glass">
+        <div class="input-group">
+          <label>YOUR FULL NAME</label>
+          <input type="text" id="userName" class="form-input" placeholder="Full name" required>
+        </div>
+        <div class="input-group">
+          <label>SELECT YOUR PERFUME</label>
+          <select id="userPerfume" class="form-input" style="background-color: var(--brand-navy-accent);">
+            <option value="Sauvage">Sauvage</option>
+            <option value="Blue D">Blue D</option>
+            <option value="Si">Si</option>
+            <option value="Agressive">Agressive</option>
+            <option value="Custom">Custom Signature Mix</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top: 10px;">ORDER VIA WHATSAPP</button>
+      </form>
+
+      <div style="margin-top: 60px; padding-bottom: 60px;">
+        <h3>Follow Kቲ perfume</h3>
+        <div class="social-links">
+          <a href="https://www.tiktok.com/@rohi_scent" class="social-link" target="_blank">TikTok</a>
+          <a href="https://t.me/ktperfume" class="social-link" target="_blank">Telegram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer style="text-align: center; padding: 40px; color: var(--text-muted); font-size: 11px; border-top: 1px solid var(--glass-border);">
+    © 2025 Kt perfume — Create Your Own Essence — Addis Ababa, Ethiopia
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('active');
+    }
+
+    const themeBtn = document.getElementById('themeBtn');
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('light-mode');
+      themeBtn.textContent = document.body.classList.contains('light-mode') ? '☀️' : '🌙';
+    });
+
+    function selectPerfume(name) {
+      document.getElementById('userPerfume').value = name;
+      window.location.href = '#order';
+    }
+
+    const WA_NUMBER = "+251989922984"; 
+    document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('userName').value;
+      const perfume = document.getElementById('userPerfume').value;
+      const fullMessage = `Hello Kt perfume! \n\nNew Order Request:\n- Name: ${name}\n- Scent: ${perfume}\n\nSent from website.`;
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(fullMessage)}`, '_blank');
+    });
+  </script>
+</body>
+</html>
