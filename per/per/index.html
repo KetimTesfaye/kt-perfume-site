@@ -7,6 +7,20 @@
 
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    /* Sections hidden by default */
+    #about, #products {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in;
+    }
+    
+    /* Class to reveal sections */
+    .show-section {
+      display: block !important;
+      opacity: 1 !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -20,9 +34,9 @@
     </div>
 
     <nav class="nav-links" id="nav-menu">
-      <a href="#products" class="nav-link">Scent Room</a>
-      <a href="#about" class="nav-link">About</a>
+      <a href="javascript:void(0)" class="nav-link" onclick="toggleSection('products')">Scent Room</a>
       <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="javascript:void(0)" class="nav-link" onclick="toggleSection('about')">About</a>
       <a href="#faq" class="nav-link">FAQ</a>
       <button id="themeBtn" class="theme-toggle">🌙</button>
     </nav>
@@ -44,7 +58,7 @@
           Experience high-end luxury for less. We specialize in premium hand-blended fragrances inspired by global icons, professional bottle refills, and bespoke scents mixed uniquely for you. Crafted in Addis Ababa, made for your skin.
         </p>
         <div style="display:flex; gap:15px; margin-top:30px;">
-          <a href="#products" class="btn btn-primary">View Collection</a>
+          <button onclick="toggleSection('products')" class="btn btn-primary">View Collection</button>
           <a href="#order" class="btn btn-outline">Order via WhatsApp</a>
         </div>
       </div>
@@ -67,6 +81,7 @@
         <div class="glass" style="padding: 30px; border-color: var(--brand-gold);">
           <h3 style="color: var(--brand-gold); margin-top:0;">The Handmade Difference</h3>
           <p style="font-size: 14px;">We avoid mass production. Each bottle is hand-poured, labeled with care, and checked for quality before it reaches your hands.</p>
+          <button class="btn btn-outline" style="margin-top: 20px;" onclick="toggleSection('about')">Close About</button>
         </div>
       </div>
     </section>
@@ -75,47 +90,51 @@
       <h2 style="text-align:center; font-family:'Playfair Display'; font-size: 38px;">Scent Gallery</h2>
       <div class="grid">
          <article class="perfume-card glass">
-          <div class="bottle-placeholder"><span>BOTTLE IMAGE</span></div>
+          <img src="assets/30ml.jpg" alt="Sauvage Perfume" class="product-image">
           <h3>Sauvage</h3>
           <p style="color: var(--text-muted); font-size: 13px;">Fresh • Spicy • Raw</p>
-          <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Bergamot • Pepper • Ambroxan</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">950 ETB</p>
+          <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Bergamot • Pepper • Ambroxan</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">1950 ETB</p>
           <button class="btn btn-primary" style="width:100%" onclick="selectPerfume('Sauvage')">Select Scent</button>
         </article>
         <article class="perfume-card glass">
-          <div class="bottle-placeholder"><span>BOTTLE IMAGE</span></div>
+          <img src="assets/b2.jpg" alt="Sauvage Perfume" class="product-image">
+
           <h3>Blue D</h3>
           <p style="color: var(--text-muted); font-size: 13px;">Sophisticated • Clean • Smoky</p>
-          <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Grapefruit • Incense • Cedarwood</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">950 ETB</p>
+          <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Grapefruit • Incense • Cedarwood</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">1950 ETB</p>
           <button class="btn btn-primary" style="width:100%" onclick="selectPerfume('Blue D')">Select Scent</button>
         </article>
         <article class="perfume-card glass">
-          <div class="bottle-placeholder"><span>BOTTLE IMAGE</span></div>
+          <img src="assets/50ml.jpg" alt="Sauvage Perfume" class="product-image">
           <h3>Si</h3>
         <p style="color: var(--text-muted); font-size: 13px;">Floral • Warm • Elegant</p>
         <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Blackcurrant • Rose • Vanilla</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">1100 ETB</p>
           <button class="btn btn-primary" style="width:100%" onclick="selectPerfume('Si')">Select Scent</button>
         </article>
         <article class="perfume-card glass">
-          <div class="bottle-placeholder"><span>BOTTLE IMAGE</span></div>
+          <img src="assets/b4.png" alt="Sauvage Perfume" class="product-image">
           <h3>Baccarat</h3>
         <p style="color: var(--text-muted); font-size: 13px;">Luxury • Sweet • Airy</p>
-        <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Saffron • Jasmine • Ambergris</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">900 ETB</p>
+        <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Saffron • Jasmine • Ambergris</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">1999 ETB</p>
           <button class="btn btn-primary" style="width:100%" onclick="selectPerfume('Agressive')">Select Scent</button>
         </article>
         <article class="perfume-card glass">
-          <div class="bottle-placeholder"><span>BOTTLE IMAGE</span></div>
+          <img src="assets/30ML.png" alt="Sauvage Perfume" class="product-image">
           <h3>Creed Aventus</h3>
           <p style="color: var(--text-muted); font-size: 13px;">Power • Success • Fruity</p>
-          <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Pineapple • Birch • Oakmoss</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">950 ETB</p>
+          <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Pineapple • Birch • Oakmoss</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">1999 ETB</p>
           <button class="btn btn-primary" style="width:100%" onclick="selectPerfume('Sauvage')">Select Scent</button>
         </article>
         <article class="perfume-card glass">
-          <div class="bottle-placeholder"><span>BOTTLE IMAGE</span></div>
+          <img src="assets/00.jpg" alt="Sauvage Perfume" class="product-image">
           <h3>Eternity</h3>
           <p style="color: var(--text-muted); font-size: 13px;">Timeless • Fresh • Green</p>
-          <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Lavender • Sage • Sandalwood</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">950 ETB</p>
+          <p style="color: var(--brand-gold); font-size: 11px; margin-top: -10px;">Lavender • Sage • Sandalwood</p>          <p style="font-size: 22px; color: var(--brand-gold); font-weight: 800;">1999 ETB</p>
           <button class="btn btn-primary" style="width:100%" onclick="selectPerfume('Sauvage')">Select Scent</button>
         </article>
+      </div>
+      <div style="text-align: center; margin-top: 30px;">
+        <button class="btn btn-outline" onclick="toggleSection('products')">Hide Gallery</button>
       </div>
     </section>
 
@@ -124,15 +143,15 @@
       <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
         <div class="glass" style="padding:30px; text-align:center;">
           <h3>30ml Classic</h3>
-          <p class="price-large" style="font-size: 28px; color: var(--brand-gold);">550 ETB</p>
+          <p class="price-large" style="font-size: 28px; color: var(--brand-gold);">1999 ETB</p>
         </div>
         <div class="glass" style="padding:30px; text-align:center; border: 1px solid var(--brand-gold);">
           <h3>50ml Signature</h3>
-          <p class="price-large" style="font-size: 28px; color: var(--brand-gold);">950 ETB</p>
+          <p class="price-large" style="font-size: 28px; color: var(--brand-gold);">4999 ETB</p>
         </div>
         <div class="glass" style="padding:30px; text-align:center;">
           <h3>Gift Set</h3>
-          <p class="price-large" style="font-size: 28px; color: var(--brand-gold);">2400 ETB</p>
+          <p class="price-large" style="font-size: 28px; color: var(--brand-gold);">7500 ETB</p>
         </div>
       </div>
     </section>
@@ -159,6 +178,10 @@
             <option value="Blue D">Blue D</option>
             <option value="Si">Si</option>
             <option value="Agressive">Agressive</option>
+            <option value="Cool water">Cool water</option>
+            <option value="Eternitiy">Eternitiy</option>
+            <option value="Baccarat">Baccarat</option>
+            <option value="Creed Aventus">Creed Aventus</option>
             <option value="Custom">Custom Signature Mix</option>
           </select>
         </div>
@@ -176,13 +199,29 @@
   </main>
 
   <footer style="text-align: center; padding: 40px; color: var(--text-muted); font-size: 11px; border-top: 1px solid var(--glass-border);">
-    © 2025 Kt perfume — Create Your Own Essence — Addis Ababa, Ethiopia
+    © 2026 Kt perfume — Create Your Own Essence — Addis Ababa, Ethiopia
   </footer>
 
   <script>
     function toggleMenu() {
       const menu = document.getElementById('nav-menu');
       menu.classList.toggle('active');
+    }
+
+    // New unified function to show/hide sections
+    function toggleSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      
+      // Close nav menu if mobile
+      const menu = document.getElementById('nav-menu');
+      menu.classList.remove('active');
+
+      if (section.classList.contains('show-section')) {
+        section.classList.remove('show-section');
+      } else {
+        section.classList.add('show-section');
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     }
 
     const themeBtn = document.getElementById('themeBtn');

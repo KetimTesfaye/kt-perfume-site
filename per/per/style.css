@@ -69,6 +69,14 @@ body {
 .nav-link { text-decoration: none; color: var(--text-main); font-weight: 600; margin-left: 25px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
 .nav-link:hover { color: var(--brand-gold); }
 
+.product-image {
+  width: 100%;
+  height: 250px;    /* Or whatever height your placeholder was */
+  object-fit: cover; /* This ensures the image doesn't look stretched */
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
 /* Logo Styling Restored */
 .hero-right img {
   max-width: 120%;
